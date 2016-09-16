@@ -1,0 +1,377 @@
+2016-08-29T22:15:26.426+0530 INFO  [main           ][        mongodb.MongoScheduler#              run]: Starting MongodbFramework on Mesos - [numHwNodes: 3, zk mesos: zk://localhost:2181/mesos, ram:256.0]
+2016-08-29T22:15:26.641+0530 INFO  [Thread-4       ][        mongodb.MongoScheduler#       registered]: Framework registered as 854b6302-7fb8-46a6-b4a7-da9dc88bb100-0001
+2016-08-29T22:15:27.641+0530 INFO  [Thread-4       ][          state.FrameworkState#   markRegistered]: FrameworkID stored in zookeeper: frameworkId = value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-0001"
+
+2016-08-29T22:15:27.766+0530 DEBUG [Thread-5       ][         mongodb.OfferStrategy#stnameResolveable]: Attempting to resolve hostname: hanumant-Lenovo-G505s
+2016-08-29T22:15:27.773+0530 INFO  [Thread-5       ][         mongodb.OfferStrategy#         evaluate]: Accepted offer: hanumant-Lenovo-G505s
+2016-08-29T22:15:27.825+0530 INFO  [Thread-5       ][       mongodb.TaskInfoFactory#       createTask]: Creating  task with resources: [name: "cpus"
+type: SCALAR
+scalar {
+  value: 1.0
+}
+role: "*"
+, name: "mem"
+type: SCALAR
+scalar {
+  value: 256.0
+}
+role: "*"
+, name: "disk"
+type: SCALAR
+scalar {
+  value: 512.0
+}
+role: "*"
+, name: "ports"
+type: RANGES
+ranges {
+  range {
+    begin: 31000
+    end: 31000
+  }
+}
+role: "*"
+]
+2016-08-29T22:15:27.941+0530 INFO  [Thread-5       ][       mongodb.TaskInfoFactory#      getTaskType]: launching confignode
+2016-08-29T22:15:28.076+0530 INFO  [Thread-5       ][       mongodb.TaskInfoFactory#      getTaskType]: launching confignode
+2016-08-29T22:15:28.136+0530 DEBUG [Thread-5       ][        mongodb.MongoScheduler#   resourceOffers]: name: "mongo-confignode"
+task_id {
+  value: "mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z"
+}
+slave_id {
+  value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+}
+resources {
+  name: "cpus"
+  type: SCALAR
+  scalar {
+    value: 1.0
+  }
+  role: "*"
+}
+resources {
+  name: "mem"
+  type: SCALAR
+  scalar {
+    value: 256.0
+  }
+  role: "*"
+}
+resources {
+  name: "disk"
+  type: SCALAR
+  scalar {
+    value: 512.0
+  }
+  role: "*"
+}
+resources {
+  name: "ports"
+  type: RANGES
+  ranges {
+    range {
+      begin: 31000
+      end: 31000
+    }
+  }
+  role: "*"
+}
+data: "#Task metadata\n#Mon Aug 29 22:15:28 IST 2016\nhostname=hanumant-Lenovo-G505s\nstartedAt=2016-08-29T16\\:45\\:28.009Z\nipAddress=127.0.1.1\n"
+command {
+  shell: false
+}
+container {
+  type: DOCKER
+  docker {
+    image: "hanumant/mongodb-base"
+    network: HOST
+    privileged: true
+    parameters {
+      key: "env"
+      value: "PORT_NO=31000"
+    }
+    parameters {
+      key: "env"
+      value: "DATA_TYPE=confignode"
+    }
+    force_pull_image: true
+  }
+}
+
+2016-08-29T22:15:28.157+0530 DEBUG [Thread-5       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z does not exist, or is not yet initialized, this must be a new task. Writing status.
+2016-08-29T22:15:28.176+0530 DEBUG [Thread-5       ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_STAGING] mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z
+2016-08-29T22:15:29.967+0530 INFO  [Thread-5       ][            state.ClusterState#          addTask]: Adding TaskInfo to cluster for task: mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z
+2016-08-29T22:15:30.022+0530 INFO  [Thread-5       ][            state.ClusterState#  setTaskInfoList]: Writing executor state list: [mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z]
+2016-08-29T22:15:36.079+0530 DEBUG [Thread-6       ][         mongodb.OfferStrategy#stnameResolveable]: Attempting to resolve hostname: hanumant-Lenovo-G505s
+2016-08-29T22:15:36.081+0530 INFO  [Thread-6       ][         mongodb.OfferStrategy#         evaluate]: Accepted offer: hanumant-Lenovo-G505s
+2016-08-29T22:15:36.083+0530 INFO  [Thread-6       ][       mongodb.TaskInfoFactory#       createTask]: Creating  task with resources: [name: "cpus"
+type: SCALAR
+scalar {
+  value: 1.0
+}
+role: "*"
+, name: "mem"
+type: SCALAR
+scalar {
+  value: 256.0
+}
+role: "*"
+, name: "disk"
+type: SCALAR
+scalar {
+  value: 512.0
+}
+role: "*"
+, name: "ports"
+type: RANGES
+ranges {
+  range {
+    begin: 31001
+    end: 31001
+  }
+}
+role: "*"
+]
+2016-08-29T22:15:36.132+0530 INFO  [Thread-6       ][       mongodb.TaskInfoFactory#      getTaskType]: launching routernode
+2016-08-29T22:15:36.317+0530 INFO  [Thread-6       ][       mongodb.TaskInfoFactory#      getTaskType]: launching routernode
+2016-08-29T22:15:36.322+0530 INFO  [Thread-6       ][ExecutorEnvironmentalVariables#        addToList]: 
+configipport
+127.0.1.1:31000
+2016-08-29T22:15:36.330+0530 DEBUG [Thread-6       ][        mongodb.MongoScheduler#   resourceOffers]: name: "mongo-routernode"
+task_id {
+  value: "mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z"
+}
+slave_id {
+  value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+}
+resources {
+  name: "cpus"
+  type: SCALAR
+  scalar {
+    value: 1.0
+  }
+  role: "*"
+}
+resources {
+  name: "mem"
+  type: SCALAR
+  scalar {
+    value: 256.0
+  }
+  role: "*"
+}
+resources {
+  name: "disk"
+  type: SCALAR
+  scalar {
+    value: 512.0
+  }
+  role: "*"
+}
+resources {
+  name: "ports"
+  type: RANGES
+  ranges {
+    range {
+      begin: 31001
+      end: 31001
+    }
+  }
+  role: "*"
+}
+data: "#Task metadata\n#Mon Aug 29 22:15:36 IST 2016\nhostname=hanumant-Lenovo-G505s\nstartedAt=2016-08-29T16\\:45\\:36.132Z\nipAddress=127.0.1.1\n"
+command {
+  shell: false
+}
+container {
+  type: DOCKER
+  docker {
+    image: "hanumant/mongodb-base"
+    network: HOST
+    privileged: true
+    parameters {
+      key: "env"
+      value: "PORT_NO=31001"
+    }
+    parameters {
+      key: "env"
+      value: "DATA_TYPE=routernode"
+    }
+    parameters {
+      key: "env"
+      value: "CONFIGIP_PORT=127.0.1.1:31000"
+    }
+    force_pull_image: true
+  }
+}
+
+2016-08-29T22:15:36.335+0530 DEBUG [Thread-6       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z does not exist, or is not yet initialized, this must be a new task. Writing status.
+2016-08-29T22:15:36.336+0530 DEBUG [Thread-6       ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_STAGING] mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z
+2016-08-29T22:15:36.792+0530 INFO  [Thread-6       ][            state.ClusterState#          addTask]: Adding TaskInfo to cluster for task: mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z
+2016-08-29T22:15:36.826+0530 INFO  [Thread-6       ][            state.ClusterState#  setTaskInfoList]: Writing executor state list: [mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z, mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z]
+2016-08-29T22:15:42.121+0530 DEBUG [Thread-7       ][         mongodb.OfferStrategy#stnameResolveable]: Attempting to resolve hostname: hanumant-Lenovo-G505s
+2016-08-29T22:15:42.123+0530 INFO  [Thread-7       ][         mongodb.OfferStrategy#         evaluate]: Accepted offer: hanumant-Lenovo-G505s
+2016-08-29T22:15:42.126+0530 INFO  [Thread-7       ][       mongodb.TaskInfoFactory#       createTask]: Creating  task with resources: [name: "cpus"
+type: SCALAR
+scalar {
+  value: 1.0
+}
+role: "*"
+, name: "mem"
+type: SCALAR
+scalar {
+  value: 256.0
+}
+role: "*"
+, name: "disk"
+type: SCALAR
+scalar {
+  value: 512.0
+}
+role: "*"
+, name: "ports"
+type: RANGES
+ranges {
+  range {
+    begin: 31002
+    end: 31002
+  }
+}
+role: "*"
+]
+2016-08-29T22:15:42.193+0530 INFO  [Thread-7       ][       mongodb.TaskInfoFactory#      getTaskType]: launching dbnode
+2016-08-29T22:15:42.230+0530 INFO  [Thread-7       ][       mongodb.TaskInfoFactory#      getTaskType]: launching dbnode
+2016-08-29T22:15:42.237+0530 INFO  [Thread-7       ][ExecutorEnvironmentalVariables#        addToList]: 
+routeripport
+127.0.1.1:31001
+2016-08-29T22:15:42.238+0530 INFO  [Thread-7       ][ExecutorEnvironmentalVariables#        addToList]: 
+dbipport
+127.0.1.1:31002
+2016-08-29T22:15:42.243+0530 DEBUG [Thread-7       ][        mongodb.MongoScheduler#   resourceOffers]: name: "mongo-dbnode"
+task_id {
+  value: "mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z"
+}
+slave_id {
+  value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+}
+resources {
+  name: "cpus"
+  type: SCALAR
+  scalar {
+    value: 1.0
+  }
+  role: "*"
+}
+resources {
+  name: "mem"
+  type: SCALAR
+  scalar {
+    value: 256.0
+  }
+  role: "*"
+}
+resources {
+  name: "disk"
+  type: SCALAR
+  scalar {
+    value: 512.0
+  }
+  role: "*"
+}
+resources {
+  name: "ports"
+  type: RANGES
+  ranges {
+    range {
+      begin: 31002
+      end: 31002
+    }
+  }
+  role: "*"
+}
+data: "#Task metadata\n#Mon Aug 29 22:15:42 IST 2016\nhostname=hanumant-Lenovo-G505s\nstartedAt=2016-08-29T16\\:45\\:42.194Z\nipAddress=127.0.1.1\n"
+command {
+  shell: false
+}
+container {
+  type: DOCKER
+  docker {
+    image: "hanumant/mongodb-base"
+    network: HOST
+    privileged: true
+    parameters {
+      key: "env"
+      value: "PORT_NO=31002"
+    }
+    parameters {
+      key: "env"
+      value: "DATA_TYPE=dbnode"
+    }
+    parameters {
+      key: "env"
+      value: "ROUTERIP_PORT=127.0.1.1:31001"
+    }
+    parameters {
+      key: "env"
+      value: "DBIP_PORT=127.0.1.1:31002"
+    }
+    force_pull_image: true
+  }
+}
+
+2016-08-29T22:15:42.246+0530 DEBUG [Thread-7       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z does not exist, or is not yet initialized, this must be a new task. Writing status.
+2016-08-29T22:15:42.247+0530 DEBUG [Thread-7       ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_STAGING] mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z
+2016-08-29T22:15:42.338+0530 INFO  [Thread-7       ][            state.ClusterState#          addTask]: Adding TaskInfo to cluster for task: mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z
+2016-08-29T22:15:42.347+0530 INFO  [Thread-7       ][            state.ClusterState#  setTaskInfoList]: Writing executor state list: [mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z, mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z, mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z]
+2016-08-29T22:15:48.078+0530 DEBUG [Thread-8       ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:15:54.054+0530 INFO  [Thread-9       ][        mongodb.MongoScheduler#     statusUpdate]: Status update: value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+ value: "mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z"
+ false TASK_RUNNING REASON_COMMAND_EXECUTOR_FAILED  
+2016-08-29T22:15:54.297+0530 INFO  [Thread-9       ][            state.ClusterState#       updateTask]: Updating task status for executor: mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z [mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z, 1.47248915373323E9, TASK_RUNNING]
+2016-08-29T22:15:54.442+0530 DEBUG [Thread-9       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z exists, using old state: TASK_STAGING
+2016-08-29T22:15:54.442+0530 DEBUG [Thread-9       ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_RUNNING] mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z
+2016-08-29T22:15:55.289+0530 DEBUG [Thread-9       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z exists, using old state: TASK_RUNNING
+2016-08-29T22:15:55.330+0530 DEBUG [Thread-10      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:01.217+0530 DEBUG [Thread-11      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:02.462+0530 INFO  [Thread-12      ][        mongodb.MongoScheduler#     statusUpdate]: Status update: value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+ value: "mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z"
+ false TASK_RUNNING REASON_COMMAND_EXECUTOR_FAILED  
+2016-08-29T22:16:02.592+0530 INFO  [Thread-12      ][            state.ClusterState#       updateTask]: Updating task status for executor: mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z [mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z, 1.472489161613796E9, TASK_RUNNING]
+2016-08-29T22:16:02.640+0530 DEBUG [Thread-12      ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z exists, using old state: TASK_STAGING
+2016-08-29T22:16:02.640+0530 DEBUG [Thread-12      ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_RUNNING] mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z
+2016-08-29T22:16:04.041+0530 DEBUG [Thread-12      ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z exists, using old state: TASK_RUNNING
+2016-08-29T22:16:04.667+0530 INFO  [Thread-13      ][        mongodb.MongoScheduler#     statusUpdate]: Status update: value: "854b6302-7fb8-46a6-b4a7-da9dc88bb100-S0"
+ value: "mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z"
+ false TASK_RUNNING REASON_COMMAND_EXECUTOR_FAILED  
+2016-08-29T22:16:04.864+0530 INFO  [Thread-13      ][            state.ClusterState#       updateTask]: Updating task status for executor: mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z [mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z, 1.472489164119903E9, TASK_RUNNING]
+2016-08-29T22:16:04.948+0530 DEBUG [Thread-13      ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z exists, using old state: TASK_STAGING
+2016-08-29T22:16:04.948+0530 DEBUG [Thread-13      ][          mongodb.MdTaskStatus#        setStatus]: Writing task status to zk: [TASK_RUNNING] mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z
+2016-08-29T22:16:06.796+0530 DEBUG [Thread-13      ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z exists, using old state: TASK_RUNNING
+2016-08-29T22:16:07.366+0530 DEBUG [Thread-14      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:13.118+0530 DEBUG [Thread-15      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:19.362+0530 DEBUG [Thread-16      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:25.167+0530 DEBUG [Thread-17      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:31.145+0530 DEBUG [Thread-18      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:37.173+0530 DEBUG [Thread-19      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:43.164+0530 DEBUG [Thread-20      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:49.191+0530 DEBUG [Thread-21      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:16:55.184+0530 DEBUG [Thread-22      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:01.195+0530 DEBUG [Thread-23      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:07.202+0530 DEBUG [Thread-24      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:13.210+0530 DEBUG [Thread-25      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:19.227+0530 DEBUG [Thread-26      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:25.227+0530 DEBUG [Thread-27      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:31.271+0530 DEBUG [Thread-28      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:37.247+0530 DEBUG [Thread-29      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:43.279+0530 DEBUG [Thread-30      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:49.261+0530 DEBUG [Thread-31      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:17:55.270+0530 DEBUG [Thread-32      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:18:01.279+0530 DEBUG [Thread-33      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:18:07.290+0530 DEBUG [Thread-34      ][        mongodb.MongoScheduler#   resourceOffers]: Declined offer: Reason: Optional[Cluster size already fulfilled]
+2016-08-29T22:18:07.717+0530 INFO  [Thread-0       ][                  mongodb.Main#              run]: Performing graceful shutdown
+2016-08-29T22:18:07.933+0530 DEBUG [Thread-0       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221527.843Z exists, using old state: TASK_RUNNING
+2016-08-29T22:18:08.077+0530 INFO  [Thread-0       ][          mongodb.MdTaskStatus#          destroy]:   destroy task  
+2016-08-29T22:18:08.334+0530 DEBUG [Thread-0       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221536.086Z exists, using old state: TASK_RUNNING
+2016-08-29T22:18:08.391+0530 INFO  [Thread-0       ][          mongodb.MdTaskStatus#          destroy]:   destroy task  
+2016-08-29T22:18:08.592+0530 DEBUG [Thread-0       ][          mongodb.MdTaskStatus#           <init>]: Task status for mongodb_hanumant-Lenovo-G505s_20160829T221542.127Z exists, using old state: TASK_RUNNING
+2016-08-29T22:18:08.602+0530 INFO  [Thread-0       ][          mongodb.MdTaskStatus#          destroy]:   destroy task  
